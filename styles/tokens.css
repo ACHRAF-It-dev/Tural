@@ -4,24 +4,27 @@
   --surface-main: #fff1eb;
   --surface-alt-1: #ffe8dc;
   --surface-alt-2: #f5f2ed;
-  --surface-footer: #000000;
+  --surface-footer-half-1:#FFE8DC;
+  --surface-footer-half-2: #000000;
 
   --container-main: #ffffff;
   --container-alt-1: #f5f2ed;
   --container-alt-2: #ffe8dc;
-  --container-footer: #ff691f;
+  --container-footer-half-1: #ff691f;
+/* there is no container for the second half of footer . */
 
   --on-surface-main: #000000;
   --on-surface-alt: #425252;
   --on-surface-alt: #425252;
-  --on-surface-footer: #ffffff;
+  --on-surface-footer-half-1: #000000;
+  --on-surface-footer-half-2: #ffffff;
   --on-surface-link: #6b2d0e;
-  --on-surface-paragraph: #8d8d8d;
+  --on-surface-pale-paragraph: #8d8d8d;
 
   --on-container-main: #43428b;
   --on-container-alt-1: #000000;
   --on-container-alt-2: #000000;
-  --on-container-footer: #ffffff;
+  --on-container-footer-half-1: #ffffff;
 }
 
 /*

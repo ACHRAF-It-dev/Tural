@@ -71,7 +71,7 @@ h2 {
 }
 
 footer h2 {
-  color: black;
+  color: var(--on-surface-footer-half-1);
 }
 
 main span {
@@ -80,6 +80,6 @@ main span {
 }
 
 .paragraph-lg {
-  color: var(--on-surface-paragraph);
+  color: var(--on-surface-pale-paragraph);
 }
 /* layout */
