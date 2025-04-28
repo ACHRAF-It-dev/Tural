@@ -1,0 +1,85 @@
+/* reset */
+html {
+  font-size: 16px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+}
+
+/* typographie */
+
+.nav-bar,
+header a,
+main span,
+h5 {
+  font-size: var(--link);
+  font-weight: bold;
+  letter-spacing: 0.1px;
+}
+
+.slogan,
+h4 {
+  font-size: var(--caption);
+  font-weight: bold;
+}
+
+p {
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: var(--display-xl);
+}
+
+h2 {
+  font-size: var(--headline-xl);
+}
+
+form input,
+form textarea {
+  font-size: var(--caption-sm);
+}
+
+/* font colors */
+
+.nav-bar,
+header a {
+  color: var(--on-surface-link);
+}
+
+h1,
+h2 {
+  color: var(--on-surface-alt);
+}
+
+footer h2 {
+  color: black;
+}
+
+main span {
+  color: white;
+  background-color: orange;
+}
+
+.paragraph-lg {
+  color: var(--on-surface-paragraph);
+}
+/* layout */
