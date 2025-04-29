@@ -74,9 +74,9 @@ footer h2 {
   color: var(--on-surface-footer-half-1);
 }
 
-main span {
+.pseudo-btn{
   color: white;
-  background-color: orange;
+  background-color: var( --container-pseudo-btn);
 }
 
 .paragraph-lg {
@@ -84,6 +84,8 @@ main span {
 }
 
 /* layout */
+
+/* header layout */
 
 header{
   height: 916px;
@@ -118,7 +120,7 @@ header::before{
   gap: var(--space-link-margin);  
   background-color: var(--color-background-navbar);
   padding: 1rem 0;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
 }
 
@@ -150,3 +152,75 @@ header::before{
 .map{
   width: 50%;
 }
+
+/* main layout : first section */
+
+.content{
+  /* padding: 100px var(--page-padding-left-right) 0;   */
+}
+
+.pseudo-btn{
+  padding: 10px 15px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
+/* .heading-with-icon {
+  margin-top: 50px;
+} */
+
+/* .icon{
+  width: auto;
+  height: auto;
+} */
+
+/* .inline-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+.word-and-icon{
+  display: flex;
+  align-items: center;
+  gap: 0.625rem; /*10px*/
+}
+
+.about-company{
+  display: grid;
+  /* gap: 0 10px; */
+  grid-template-columns: 1fr 38.6%;
+  margin-bottom: 47px;
+}
+
+
+.animation{
+  width: 100%;
+}
+
+.extra-padding-paragraph{
+  padding-top: 12.5rem;
+  text-align: left;
+}
+
+.company-overview{
+  height: 1105px;
+  position: relative;
+  padding: 100px var(--page-padding-left-right) 0;  
+  /* background-color:blueviolet; */
+  /* top: -137px; */
+}
+
+.shape-background-1{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  inset: -137px 0;
+  /* inset: 0; */
+  z-index: -1; 
+}
+

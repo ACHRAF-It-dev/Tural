@@ -11,7 +11,8 @@
   --container-main: #ffffff;
   --container-alt-1: #f5f2ed;
   --container-alt-2: #ffe8dc;
-  --container-footer-half-1: #ff691f;
+  --container-pseudo-btn:#FF691F;
+  --container-footer-half-1: #ff691f; 
 /* there is no container for the second half of footer . */
 
   --on-surface-main: #000000;
@@ -53,8 +54,8 @@ the font size tokens for the theme.
   --space-irrelevent-text: 1.25rem;
   --space-categorie-grid: 2.5rem;
   --space-heading-margin-buttom: 9.375rem; /* in 'about us' page , the buttom margin of the headings */
-  --space-content-padding: 12.5rem; /* in 'about us' page , the content of the sections up and down  */
+  --space-content-padding-top-buttom: 12.5rem; /* in 'about us' page , the content of the sections up and down  */
   --space-product-grid-horizontal: 1rem;
   --space-product-grid-vertical: 3rem;
-  --page-padding : 8rem;
+  --page-padding-left-right : 8rem;
 }
