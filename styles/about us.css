@@ -153,7 +153,7 @@ header::before{
   width: 50%;
 }
 
-/* main layout : first section */
+/* main layout : first section ****************************************************************************/ 
 
 /* .content{
   padding: 100px var(--page-padding-left-right) 0;  
@@ -220,7 +220,8 @@ header::before{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  top: -200px;
+  /* top: -200px; */
+  margin-top: -200px;
 }
 
 .shape-background-1{
@@ -234,7 +235,7 @@ header::before{
   z-index: -8; 
 }
 
-/* main layout : first section ****************************************************************************/
+/* main layout : second section ****************************************************************************/
 
 .section-heading{
   text-align: center;
@@ -256,7 +257,8 @@ header::before{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  top: -375px;
+  /* top: -375px; */
+  margin-top: -200px;
 }
 
 .product-categorie-card{
@@ -317,4 +319,38 @@ header::before{
   z-index: -7; 
 }
 
+/* main layout : third section ****************************************************************************/
+
+.service-features{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../assets/svgs/shape-background-3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -200px;
+  height: 915px;
+  padding: 250px var(--page-padding-left-right) 0; 
+}
+
+.features-cards-container{
+  display: flex;
+  gap: 1rem;
+}
+
+.feature-card{
+  width: 273px;
+  height: 273px;
+  background-color: var(--container-alt-1);
+  border-radius: 50px;
+  padding: 40px 20px;
+}
+
+.feature-img{
+  width: 64px;
+  height: 64px;
+  margin-bottom: 40%;
+}
+
+/* main layout : fourth section ****************************************************************************/
 
