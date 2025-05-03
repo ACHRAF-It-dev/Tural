@@ -73,7 +73,7 @@
       </section>
 
       <section class="products-categorie content">
-        <h2 class="section-heading">What we offer</h2>
+        <!-- <h2 class="section-heading">What we offer</h2> -->
         <div class="product-categorie-galerie">
           <div class="product-categorie-card">
             <h4 class="card-categorie-label">Household Items</h4>
@@ -111,7 +111,6 @@
             />
           </div>
         </div>
-        <!-- <img class="shape-background-2" src="../assets/svgs/shape-background-2.svg" alt=""> -->
       </section>
 
       <section class="service-features content">
@@ -158,75 +157,77 @@
     </main>
 
     <footer>
-      <div>
-        <h2>Get in touch</h2>
-        <form action="">
-          <label for="name"
-            >Name
-            <input type="text" name="name" id="name" placeholder="" />
-          </label>
-          <br />
-          <label for="email"
-            >Email
-            <input type="email" name="email" id="email" placeholder="" />
-          </label>
-          <br />
-          <label for="message"
-            >Message
-            <textarea name="message" id="message"></textarea>
-          </label>
-          <br />
-          <input type="submit" name="submit" value="submit" />
-        </form>
+      <div class="left-side-container">
+        <div class="footer-left-side">
+          <div class="underlined-title">
+            <h2 class="form-title">Get in touch</h2>
+            <img class="under-line" src="../assets/svgs/under-line.svg" alt="">
+          </div>
+          <form action="">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="" class="form-input"/>
+            <br />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="" class="form-input"/>
+            <br />
+            <label for="message">Message</label>
+            <textarea name="message" id="message" class="form-input"></textarea>
+            <br />
+            <input type="submit" name="submit" value="submit" class="button"/>
+          </form>
+        </div>
       </div>
-      <img src="../assets/svgs/or-arrow.svg" alt="arrow" srcset="" />
-      <div>
-        <p>
-          Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis.
-        </p>
-        <img
-          class="map"
-          src="../assets/map.png"
-          alt="location on map"
-          srcset=""
-        />
-        <ul>
-          <li>
-            <a href=""
-              ><img
-                src="../assets/svgs/phone icon.svg"
-                alt="phone icon"
-                srcset="" /></a
-            >000111222333
-          </li>
-          <li>
-            <a href=""></a
-            ><img src="../assets/svgs/Location Icon.svg" alt="" srcset="" />NYC,
-            United States
-          </li>
-          <li>
-            <a href=""></a
-            ><img
-              src="../assets/svgs/Email Icon.svg"
-              alt=""
-            />somebody@gmail.com
-          </li>
-        </ul>
-        <ul style="background-color: black">
-          <li>
-            <a href=""><img src="../assets/svgs/Instagram.svg" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="/assets/svgs/Twitter.svg" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="/assets/svgs/Facebook.svg" alt="" /></a>
-          </li>
-          <li>
-            <a href=""><img src="/assets/svgs/Youtube.svg" alt="" /></a>
-          </li>
-        </ul>
+
+      <img class="or-arrow" src="../assets/svgs/or-arrow.svg" alt="arrow" />
+
+      <div class="right-side-container">
+        <div class="footer-right-side">
+          <p>
+            Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis.
+          </p>
+          <img
+            class="map"
+            src="../assets/map.png"
+            alt="location on map"
+          />
+
+          <ul class="contact-info-container">
+            <li class="contact-info">
+              <a href="">
+                <img class="footer-icon"
+                  src="../assets/svgs/phone icon.svg"
+                  alt="phone icon"
+                  srcset="" />
+              </a>000111222333
+            </li>
+            <li class="contact-info">
+              <a href="">
+                <img class="footer-icon" src="../assets/svgs/Location Icon.svg" alt="" />
+              </a>
+              NYC,United States
+            </li>
+            <li class="contact-info">
+              <a href=""><img class="footer-icon" src="../assets/svgs/Email Icon.svg" alt=""/></a>
+              somebody@gmail.com
+            </li>
+          </ul>
+
+          <ul class="social-media">
+            <li>
+              <a href=""><img class="footer-icon" src="../assets/svgs/Instagram.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img class="footer-icon" src="/assets/svgs/Twitter.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img class="footer-icon" src="/assets/svgs/Facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href=""><img class="footer-icon" src="/assets/svgs/Youtube.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   </body>

@@ -4,29 +4,29 @@
   --surface-main: #fff1eb;
   --surface-alt-1: #ffe8dc;
   --surface-alt-2: #f5f2ed;
-  --surface-footer-half-1:#FFE8DC;
-  --surface-footer-half-2: #000000;
+  --surface-footer-side-1:#FFE8DC;
+  --surface-footer-side-2: #303030;
   --color-background-navbar :#FFE8DC ;
 
   --container-main: #ffffff;
   --container-alt-1: #f5f2ed;
   --container-alt-2: #ffe8dc;
   --container-pseudo-btn:#FF691F;
-  --container-footer-half-1: #ff691f; 
+  --container-footer-side-1: #ff691f; 
 /* there is no container for the second half of footer . */
 
   --on-surface-main: #000000;
   --on-surface-alt: #425252;
   --on-surface-alt: #425252;
-  --on-surface-footer-half-1: #000000;
-  --on-surface-footer-half-2: #ffffff;
+  --on-surface-footer-side-1: #000000;
+  --on-surface-footer-side-2: #ffffff;
   --on-surface-link: #6b2d0e;
   --on-surface-pale-paragraph: #8d8d8d;
 
   --on-container-main: #43428b;
   --on-container-alt-1: #000000;
   --on-container-alt-2: #000000;
-  --on-container-footer-half-1: #ffffff;
+  --on-container-footer-side-1: #ffffff;
 }
 
 /*
@@ -45,7 +45,7 @@ the font size tokens for the theme.
   --placeholder-md: 1rem;
   --placeholder-lg: 1.125rem;
   --title-sm: 0.875rem;
-}
+}   
 
 /* some of the spaces used throughout the project */
 :root {
