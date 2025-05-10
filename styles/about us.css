@@ -572,7 +572,15 @@ footer .button{
   }
 }
 
-/*design for small laptop (1024 < width <1240 px) ******************************/
+/*design for medium laptop (1240 < width <1439 px) ******************************/
+
+@media (min-width : 1241px) and (max-width:1440px) {
+  :root{
+    --section-1-top-margin: -11rem; 
+  }
+}
+
+/*design for big tablets (905 < width <1239 px) ******************************/
 
 @media(min-width:1024px) and (max-width:1240px){
   :root{
@@ -622,8 +630,18 @@ footer .button{
 
 }
 
-@media (min-width : 1241px) and (max-width:1440px) {
+@media (min-width:905px) and (max-width:1024px){
+  html{
+    font-size: 15px;
+  }
+ 
   :root{
-    --section-1-top-margin: -11rem; 
+    --display-xl: 36px ;
+    --headline-xl: 36px ;
+  }  
+
+  .icon{
+    width: 50px;
+    height: 50px;
   }
 }
