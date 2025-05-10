@@ -57,5 +57,13 @@ the font size tokens for the theme.
   --space-content-padding-top-buttom: 12.5rem; /* in 'about us' page , the content of the sections up and down  */
   --space-product-grid-horizontal: 1rem;
   --space-product-grid-vertical: 3rem;
-  --page-padding-left-right : 8rem;
+  --page-padding-left-right : 6rem; /*8rem*/
+  --section-1-height: 62rem /*69.06rem*/;
+  --section-1-top-padding: 15rem;
+  --section-1-top-margin: -9.8125rem;
+  --section-2-height: 98.75rem;
+  --section-2-top-padding: 16.56rem;
+  --section-2-top-margin: -11.25rem; 
+  --section-3-top-padding: 16rem ;
+  --section-3-top-margin: -12.5rem;
 }

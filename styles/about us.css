@@ -88,7 +88,8 @@ footer h2 {
 /* header layout */
 
 header{
-  height: 130vh;
+  height: 120vh;
+  width: 100%;
   position: relative;
 }
 
@@ -115,6 +116,7 @@ header::before{
   z-index: 10;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: var(--space-link-margin);  
   background-color: var(--color-background-navbar);
   padding: 1rem 0;
@@ -169,7 +171,7 @@ header::before{
 .about-company{
   display: grid;
   grid-template-columns: 1fr 38.6%;
-  margin-bottom: 4.375rem;
+  margin-bottom: 4.875rem;
 }
 
 
@@ -180,28 +182,29 @@ header::before{
 .extra-padding-paragraph{
   padding-top: 12.5rem;
   text-align: left;
+  margin-left : -90px; ;
 }
 
 .company-overview{
   z-index: 1;
   width: 100%;
-  height: 69.06rem;
+  height: var(--section-1-height); /*100vh*/
   position: relative;
-  padding: 15rem var(--page-padding-left-right) 0; 
+  padding: var(--section-1-top-padding) var(--page-padding-left-right) 0; 
   background-image: url(../assets/svgs/shape-background-1.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  margin-top: -9.8125rem;
+  margin-top: var(--section-1-top-margin);
 }
 
-.shape-background-1{
+/* .shape-background-1{
   position: absolute;
   width: 100%;
   object-fit:cover;
   inset: 0;
   z-index: -8; 
-}
+} */
 
 /* main layout : second section ****************************************************************************/
 
@@ -215,14 +218,14 @@ header::before{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 265px var(--page-padding-left-right) 0 ;
-  height: 98.75rem;
+  padding: var(--section-2-top-padding) var(--page-padding-left-right) 0 ;
+  height: var(--section-2-height); /*150vh*/
   position: relative;
   background-image: url(../assets/svgs/shape-background-2.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  margin-top: -11.25rem ; /*-180px*/
+  margin-top: var(--section-2-top-margin) ; /*-11.25rem = -180px*/
 }
 
 .product-categorie-card{
@@ -286,13 +289,16 @@ header::before{
   flex-direction: column;
   align-items: center;
   background-color: var(--surface-alt-1);
-  margin-top: -12.5rem;
-  padding: 16rem var(--page-padding-left-right); 
+  margin-top: var(--section-3-top-margin);
+  padding: var(--section-3-top-padding) var(--page-padding-left-right); 
 }
 
 .features-cards-container{
+  width: 100%;
   display: flex;
   gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature-card{
@@ -306,7 +312,16 @@ header::before{
 .feature-img{
   width: 4rem;
   height: 4rem;
-  margin-bottom: 40%;
+  margin-bottom: 40%; 
+}
+
+/* .center{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+} */
+.center h2{
+  text-align: center;
 }
 
 /* main layout : fourth section ****************************************************************************/
@@ -334,7 +349,7 @@ footer{
 
 .or-arrow{
   position: absolute;
-  top: 20%;
+  top: 17.5%;
   left: 50%;
 }
 
@@ -353,12 +368,14 @@ footer{
 }
 
 .footer-left-side{
-  padding: 6.25rem 3.125rem 6.25rem 12rem;
+  padding: 6.25rem 3.125rem 6.25rem 4rem;
+  max-width: 739.78px;
 }
 
 .footer-right-side{
-  padding:12.5rem 12rem 6.25rem 3.125rem;
+  padding:12.5rem 4rem 6.25rem 3.125rem;
   color: var(--on-surface-footer-side-2);
+  max-width: 682.875px;
 }
 
 .underlined-title{
@@ -423,4 +440,190 @@ footer .button{
   font-size: 1.25rem;
 }
 
+.container{
+  width: 100%;
+  max-width: 1168px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.product-categorie-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+}
+
+.footer-container{
+  display: flex;
+}
+
+.product-categorie-section-heading{
+  text-align: center;
+  margin: 0;
+}
+
+
+/* making the website responsive ***************************************************************************/
+
+/* for larger screens >= 1440 *****************************/
+
+@media(min-width:1440px){
+  html{
+    font-size: 17px;
+  }
+  :root{
+    --section-1-top-margin:-12rem;
+  }
+
+  .left-side-container{
+    display: grid;
+    align-items: center;
+    justify-content: right;
+    grid-template-columns: 739.78px;
+  }
+
+  .footer-right-side{
+    padding: 12rem 7.55rem 6.25rem 2.949rem;
+  }
+
+  .footer-left-side{
+    padding: 6.25rem 2.949rem 6.25rem 7.55rem;
+  }
+}
+
+@media(min-width:1660px){
+  :root{
+    --section-1-top-margin:-16rem;
+  }
+}
+
+@media(min-width:1940px){
+  :root{
+    --section-1-top-margin:-20rem;
+  }
+}
+
+/* @media(min-width:2225px){
+  :root{
+    --section-1-top-margin:-18rem;
+  }
+}
+
+@media(min-width:2500px){
+  :root{
+    --section-1-top-margin:-20rem;
+  }
+} */
+
+@media(min-width:1715px){
+   
+  :root{
+    --section-1-height : 75rem;
+    --section-1-top-padding : 20rem;
+
+    --section-2-height: 105rem;
+    --section-2-top-padding: 20rem;
+    --section-2-top-margin: -12rem;
+  }
+}
+
+@media(min-width:1840px){  
+  :root{
+    --section-2-height: 115rem;
+    --section-2-top-padding: 25rem;
+    --section-2-top-margin: -14rem;
+  }
+}
+
+@media(min-width:2000px){
+  :root{
+    --section-2-height: 120rem;
+    --section-2-top-margin: -14rem;
+  }
+}
+
+@media(min-width:2100px){
+  :root{
+    --section-2-height: 135rem;
+    --section-2-top-padding: 30rem;
+    --section-2-top-margin: -20rem;
+
+    --section-3-top-margin: -16rem;
+    --section-3-top-padding: 16rem ;
+  }
+
+  .service-features{
+    margin-top: -16rem;
+    padding: 16rem var(--page-padding-left-right); 
+  }
+}
+
+@media(min-width:2340px){
+  :root{
+    --section-1-height : 85rem;
+    --section-1-top-padding : 27rem;
+    
+    --section-2-height: 148rem;
+    --section-2-top-padding: 40rem;
+  }
+}
+
+/*design for small laptop (1024 < width <1240 px) ******************************/
+
+@media(min-width:1024px) and (max-width:1240px){
+  :root{
+    --display-xl: 40px ;
+    --headline-xl: 40px ;
+    --page-padding-left-right : 4rem;
+  }
+
+  .icon{
+    width: 60px;
+    height: 60px;
+  }
+
+  .extra-padding-paragraph{
+    margin-left: -5.625rem; /*90px*/
+  }
+
+  .feature-img{
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 84px; 
+  }
+
+  .feature-card{
+    width: 15.625rem; /*15.625rem*/
+    height: 15.625rem;
+    background-color: var(--container-alt-1);
+    border-radius: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .left-side-container{
+    display: grid;
+    align-items: center;
+    /* justify-content: right; */
+    /* grid-template-columns: 547.78px; */
+  }
+
+  .footer-left-side{
+    padding: 6.25rem 3.125rem 6.25rem 4rem;
+    /* max-width: 547.78px; */
+  }
+
+  .footer-right-side{
+    padding: 12rem 4rem 6.25rem 2.949rem;
+  }
+
+}
+
+@media (min-width : 1241px) and (max-width:1440px) {
+  :root{
+    --section-1-top-margin: -11rem; 
+  }
+}
