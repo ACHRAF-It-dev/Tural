@@ -74,9 +74,9 @@ footer h2 {
   color: var(--on-surface-footer-half-1);
 }
 
-.pseudo-btn{
+.pseudo-btn {
   color: white;
-  background-color: var( --container-pseudo-btn);
+  background-color: var(--container-pseudo-btn);
 }
 
 .paragraph-lg {
@@ -87,22 +87,22 @@ footer h2 {
 
 /* header layout */
 
-header{
-  height: 120vh;
+header {
+  height: 130vh;
   width: 100%;
   position: relative;
 }
 
-header::before{
-  content:'';
+header::before {
+  content: "";
   position: absolute;
   inset: 0;
   z-index: -9;
-  background-color: #FFC2A4;
+  background-color: #ffc2a4;
   opacity: 0.4;
 }
 
-.background{
+.background {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -112,19 +112,19 @@ header::before{
   filter: blur(3px);
 }
 
-.nav-bar{
+.nav-bar {
   z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--space-link-margin);  
+  gap: var(--space-link-margin);
   background-color: var(--color-background-navbar);
   padding: 1rem 0;
   position: fixed;
   width: 100%;
 }
 
-.hero{
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,15 +132,15 @@ header::before{
   height: 94%;
 }
 
-.logo{
+.logo {
   margin-bottom: var(--space-relevent-text);
 }
 
-.slogan{
+.slogan {
   margin-bottom: var(--space-irrelevent-text);
 }
 
-.bookmark{
+.bookmark {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,48 +149,47 @@ header::before{
   padding: 0.9375rem 0.625rem;
 }
 
-.map{
+.map {
   width: 50%;
 }
 
-/* main layout : first section ****************************************************************************/ 
+/* main layout : first section ****************************************************************************/
 
-.pseudo-btn{
+.pseudo-btn {
   padding: 0.625rem 0.9375rem;
   border-radius: 1.875rem;
   display: inline-block;
   margin-bottom: 0.625rem;
 }
 
-.word-and-icon{
+.word-and-icon {
   display: flex;
   align-items: center;
   gap: 0.625rem; /*10px*/
 }
 
-.about-company{
+.about-company {
   display: grid;
   grid-template-columns: 1fr 38.6%;
   margin-bottom: 4.875rem;
 }
 
-
-.animation{
+.animation {
   width: 100%;
 }
 
-.extra-padding-paragraph{
+.extra-padding-paragraph {
   padding-top: 12.5rem;
   text-align: left;
-  margin-left : -90px; ;
+  margin-left: -90px;
 }
 
-.company-overview{
+.company-overview {
   z-index: 1;
   width: 100%;
   height: var(--section-1-height); /*100vh*/
   position: relative;
-  padding: var(--section-1-top-padding) var(--page-padding-left-right) 0; 
+  padding: var(--section-1-top-padding) var(--page-padding-left-right) 0;
   background-image: url(../assets/svgs/shape-background-1.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -208,28 +207,28 @@ header::before{
 
 /* main layout : second section ****************************************************************************/
 
-.section-heading{
+.section-heading {
   text-align: center;
   margin-bottom: var(--space-heading-margin-buttom);
 }
 
-.products-categorie{
+.products-categorie {
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--section-2-top-padding) var(--page-padding-left-right) 0 ;
+  padding: var(--section-2-top-padding) var(--page-padding-left-right) 0;
   height: var(--section-2-height); /*150vh*/
   position: relative;
   background-image: url(../assets/svgs/shape-background-2.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  margin-top: var(--section-2-top-margin) ; /*-11.25rem = -180px*/
+  margin-top: var(--section-2-top-margin); /*-11.25rem = -180px*/
 }
 
-.product-categorie-card{
-  width: 23.125rem;/* 370px; */
+.product-categorie-card {
+  width: 23.125rem; /* 370px; */
   height: 23.125rem;
   border: none;
   border-radius: 50px;
@@ -240,8 +239,8 @@ header::before{
   align-items: center;
 }
 
-.product-categorie-card::before{
-  content: '';
+.product-categorie-card::before {
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 3.125rem;
@@ -250,7 +249,7 @@ header::before{
   z-index: 4;
 }
 
-.product-categorie-background{
+.product-categorie-background {
   position: absolute;
   object-fit: cover;
   width: 100%;
@@ -260,40 +259,40 @@ header::before{
   border-radius: 3.125rem;
 }
 
-.product-categorie-galerie{
+.product-categorie-galerie {
   width: 49.0625rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-categorie-grid);
 }
 
-.card-categorie-label{
-  margin-bottom : 2.5rem;
+.card-categorie-label {
+  margin-bottom: 2.5rem;
   color: white;
   z-index: 5;
 }
 
-.shape-background-2{
+.shape-background-2 {
   position: absolute;
   width: 100%;
   height: 107.81rem;
-  object-fit:cover;
+  object-fit: cover;
   inset: 0;
-  z-index: -7; 
+  z-index: -7;
 }
 
 /* main layout : third section ****************************************************************************/
 
-.service-features{
+.service-features {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--surface-alt-1);
   margin-top: var(--section-3-top-margin);
-  padding: var(--section-3-top-padding) var(--page-padding-left-right); 
+  padding: var(--section-3-top-padding) var(--page-padding-left-right);
 }
 
-.features-cards-container{
+.features-cards-container {
   width: 100%;
   display: flex;
   gap: 1rem;
@@ -301,18 +300,18 @@ header::before{
   justify-content: center;
 }
 
-.feature-card{
+.feature-card {
   width: 15.625rem;
-  height: 15.625rem;
+  height: auto ;
   background-color: var(--container-alt-1);
   border-radius: 3.125rem;
   padding: 2.5rem 1.25rem;
 }
 
-.feature-img{
+.feature-img {
   width: 4rem;
   height: 4rem;
-  margin-bottom: 40%; 
+  margin-bottom: 40%;
 }
 
 /* .center{
@@ -320,14 +319,14 @@ header::before{
   justify-content: center;
   align-items: center;
 } */
-.center h2{
+.center h2 {
   text-align: center;
 }
 
 /* main layout : fourth section ****************************************************************************/
 
-.our-vision{
-  padding: 9.375rem var(--page-padding-left-right) ; 
+.our-vision {
+  padding: 9.375rem var(--page-padding-left-right);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -335,102 +334,103 @@ header::before{
   background-color: var(--surface-alt-2);
 }
 
-.sized-paragraph{
+.sized-paragraph {
   width: 48.43rem;
   margin-top: 1.25rem; /*this targets only one paragraph to set up the correct distance between it and a heading*/
 }
 
 /* Footer ***************************************************************************************************/
 
-footer{
+footer {
   position: relative;
   display: flex;
 }
 
-.or-arrow{
+.or-arrow {
   position: absolute;
   top: 17.5%;
   left: 50%;
 }
 
-.left-side-container{
+.left-side-container {
   background-color: var(--surface-footer-side-1);
   width: 52%;
 }
 
-.right-side-container{
+.right-side-container {
   background-color: var(--surface-footer-side-2);
-  width:48%;
-  background-image: url(../assets/svgs/footer-triangle-triangle-bg.svg), url(../assets/svgs/circles-footer-bg.svg);
+  width: 48%;
+  background-image: url(../assets/svgs/footer-triangle-triangle-bg.svg),
+    url(../assets/svgs/circles-footer-bg.svg);
   background-repeat: no-repeat, no-repeat;
   background-position: top left, bottom right;
-  background-size: contain , 6rem;
+  background-size: contain, 6rem;
 }
 
-.footer-left-side{
-  padding: 6.25rem 3.125rem 6.25rem 4rem;
+.footer-left-side {
+  padding: 6.25rem 50px 6.25rem var(--page-padding-left-right);
   max-width: 739.78px;
 }
 
-.footer-right-side{
-  padding:12.5rem 4rem 6.25rem 3.125rem;
+.footer-right-side {
+  padding: 12.5rem var(--page-padding-left-right) 6.25rem 50px;
   color: var(--on-surface-footer-side-2);
   max-width: 682.875px;
 }
 
-.underlined-title{
+.underlined-title {
   margin-bottom: 3.75rem;
 }
 
-.form-input{
+.form-input {
   display: block;
   width: 100%;
   outline: none;
   border: none;
-  border-bottom: 1px  solid black;
+  border-bottom: 1px solid black;
   background-color: transparent;
   font-family: "Poppins", sans-serif;
   margin-bottom: 1.71rem;
 }
 
-label{
+label {
   display: block;
   padding-left: 0.5rem;
   margin-bottom: -1.25rem;
 }
 
-textarea{
+textarea {
   resize: none;
   overflow-y: auto;
   height: 9rem;
 }
 
-.under-line{
+.under-line {
   display: block;
   margin-top: -10px;
 }
 
-.contact-info{
+.contact-info {
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
-.social-media{
+.social-media {
   display: flex;
   gap: 1rem;
 }
 
-.map{
+.map {
   width: 100%;
   margin: 1.5rem 0.875rem;
 }
 
-.contact-info-container{
+.contact-info-container {
   margin-bottom: 3.125rem;
 }
 
-footer .button{
+footer .button {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.625rem;
@@ -440,7 +440,7 @@ footer .button{
   font-size: 1.25rem;
 }
 
-.container{
+.container {
   width: 100%;
   max-width: 1168px;
   height: 100%;
@@ -450,60 +450,59 @@ footer .button{
   align-items: center;
 }
 
-.product-categorie-container{
+.product-categorie-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8rem;
 }
 
-.footer-container{
+.footer-container {
   display: flex;
 }
 
-.product-categorie-section-heading{
+.product-categorie-section-heading {
   text-align: center;
   margin: 0;
 }
-
 
 /* making the website responsive ***************************************************************************/
 
 /* for larger screens >= 1440 *****************************/
 
-@media(min-width:1440px){
-  html{
+@media (min-width: 1440px) {
+  html {
     font-size: 17px;
   }
-  :root{
-    --section-1-top-margin:-12rem;
+  :root {
+    --section-1-top-margin: -12rem;
   }
 
-  .left-side-container{
+  .left-side-container {
     display: grid;
     align-items: center;
     justify-content: right;
     grid-template-columns: 739.78px;
   }
 
-  .footer-right-side{
-    padding: 12rem 7.55rem 6.25rem 2.949rem;
+  .footer-right-side {
+    padding: 12rem 128px 6.25rem 2.949rem;
   }
 
-  .footer-left-side{
-    padding: 6.25rem 2.949rem 6.25rem 7.55rem;
-  }
-}
-
-@media(min-width:1660px){
-  :root{
-    --section-1-top-margin:-16rem;
+  .footer-left-side {
+    padding: 6.25rem 2.949rem 6.25rem 128px;
   }
 }
 
-@media(min-width:1940px){
-  :root{
-    --section-1-top-margin:-20rem;
+@media (min-width: 1660px) {
+  :root {
+    --section-1-top-margin: -16rem;
+  }
+}
+
+@media (min-width: 1940px) {
+  :root {
+    --section-1-top-margin: -20rem;
   }
 }
 
@@ -519,11 +518,10 @@ footer .button{
   }
 } */
 
-@media(min-width:1715px){
-   
-  :root{
-    --section-1-height : 75rem;
-    --section-1-top-padding : 20rem;
+@media (min-width: 1715px) {
+  :root {
+    --section-1-height: 75rem;
+    --section-1-top-padding: 20rem;
 
     --section-2-height: 105rem;
     --section-2-top-padding: 20rem;
@@ -531,42 +529,42 @@ footer .button{
   }
 }
 
-@media(min-width:1840px){  
-  :root{
+@media (min-width: 1840px) {
+  :root {
     --section-2-height: 115rem;
     --section-2-top-padding: 25rem;
     --section-2-top-margin: -14rem;
   }
 }
 
-@media(min-width:2000px){
-  :root{
+@media (min-width: 2000px) {
+  :root {
     --section-2-height: 120rem;
     --section-2-top-margin: -14rem;
   }
 }
 
-@media(min-width:2100px){
-  :root{
+@media (min-width: 2100px) {
+  :root {
     --section-2-height: 135rem;
     --section-2-top-padding: 30rem;
     --section-2-top-margin: -20rem;
 
     --section-3-top-margin: -16rem;
-    --section-3-top-padding: 16rem ;
+    --section-3-top-padding: 16rem;
   }
 
-  .service-features{
+  .service-features {
     margin-top: -16rem;
-    padding: 16rem var(--page-padding-left-right); 
+    padding: 16rem var(--page-padding-left-right);
   }
 }
 
-@media(min-width:2340px){
-  :root{
-    --section-1-height : 85rem;
-    --section-1-top-padding : 27rem;
-    
+@media (min-width: 2340px) {
+  :root {
+    --section-1-height: 85rem;
+    --section-1-top-padding: 27rem;
+
     --section-2-height: 148rem;
     --section-2-top-padding: 40rem;
   }
@@ -574,37 +572,42 @@ footer .button{
 
 /*design for medium laptop (1240 < width <1439 px) ******************************/
 
-@media (min-width : 1241px) and (max-width:1440px) {
-  :root{
-    --section-1-top-margin: -11rem; 
+@media (min-width: 1241px) and (max-width: 1440px) {
+  :root {
+    --section-1-top-margin: -11rem;
+    --page-padding-left-right: 64px;
+  }
+
+  .map {
+    width: 30rem;
   }
 }
 
 /*design for big tablets (905 < width <1239 px) ******************************/
 
-@media(min-width:1024px) and (max-width:1240px){
-  :root{
-    --display-xl: 40px ;
-    --headline-xl: 40px ;
-    --page-padding-left-right : 4rem;
+@media (min-width: 1024px) and (max-width: 1240px) {
+  :root {
+    --display-xl: 40px;
+    --headline-xl: 40px;
+    --page-padding-left-right: 4rem;
   }
 
-  .icon{
+  .icon {
     width: 60px;
     height: 60px;
   }
 
-  .extra-padding-paragraph{
+  .extra-padding-paragraph {
     margin-left: -5.625rem; /*90px*/
   }
 
-  .feature-img{
+  .feature-img {
     width: 3.5rem;
     height: 3.5rem;
-    margin-bottom: 84px; 
+    margin-bottom: 84px;
   }
 
-  .feature-card{
+  .feature-card {
     width: 15.625rem; /*15.625rem*/
     height: 15.625rem;
     background-color: var(--container-alt-1);
@@ -612,36 +615,220 @@ footer .button{
     padding: 2rem 1rem;
   }
 
-  .left-side-container{
+  .left-side-container {
     display: grid;
     align-items: center;
     /* justify-content: right; */
     /* grid-template-columns: 547.78px; */
   }
 
-  .footer-left-side{
+  .footer-left-side {
     padding: 6.25rem 3.125rem 6.25rem 4rem;
     /* max-width: 547.78px; */
   }
 
-  .footer-right-side{
+  .footer-right-side {
     padding: 12rem 4rem 6.25rem 2.949rem;
   }
-
 }
 
-@media (min-width:905px) and (max-width:1024px){
-  html{
+@media (min-width: 905px) and (max-width: 1024px) {
+  html {
     font-size: 15px;
   }
- 
-  :root{
-    --display-xl: 36px ;
-    --headline-xl: 36px ;
-  }  
 
-  .icon{
+  :root {
+    --display-xl: 36px;
+    --headline-xl: 36px;
+  }
+
+  .icon {
     width: 50px;
     height: 50px;
   }
 }
+
+/*design for small tablets (600 < width <904 px) ******************************/
+
+@media (min-width: 600px) and (max-width: 905px) {
+  html {
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 500px;
+    height: auto;
+  }
+
+  :root {
+    --caption: 1.2rem;
+
+    --display-xl: 36px;
+    --headline-xl: 36px;
+
+    --page-padding-left-right: 32px;
+  }
+
+  .about-company {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  /* .display-part-1 ,
+  .display-part-2 {
+    display: inline-block;
+  } */
+
+  .extra-padding-paragraph {
+    padding: 0 0 0 2rem;
+    margin: 0;
+  }
+
+  .icon {
+    width: 100px;
+    height: auto;
+    margin: -50px 0 0 50px;
+  }
+
+  :root {
+    --section-1-height: 850px /*69.06rem*/;
+    --section-1-top-padding: 170px;
+    --section-1-top-margin: -157px;
+
+    --section-2-height: 1200px;
+    --section-2-top-padding: 230px;
+    --section-2-top-margin: -180px;
+
+    --space-categorie-grid: 15px;
+  }
+
+  /* 
+  .animation{
+    width: 100%;
+    } */
+    
+    /*
+    .product-categorie-galerie {
+      width: auto;
+      display: grid;//
+      grid-template-columns: 1fr 1fr;// 
+      display: flex;
+      gap: var(--space-categorie-grid);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    */
+
+  .product-categorie-galerie , 
+  .features-cards-container {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-categorie-grid);
+  }
+    
+  .product-categorie-card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .feature-card{
+    width: 250px;
+    height: 250px;
+  }
+
+  .sized-paragraph {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.25rem; /*this targets only one paragraph to set up the correct distance between it and a heading*/
+  }
+
+}
+
+@media(min-width:600px) and (max-width:860px){
+
+  :root {
+    --section-1-height: 865px /*69.06rem*/;
+    --section-1-top-padding: 170px;
+    --section-1-top-margin: -157px;
+
+    --section-2-height: 1200px;
+    --section-2-top-padding: 230px;
+    --section-2-top-margin: -180px;
+  }
+
+  .about-company{
+    margin-bottom:90px ;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .or-arrow{
+    display: none;
+  }
+
+  .left-side-container , 
+  .right-side-container{
+    width: 100%;
+    padding: 100px 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-right-side,
+  .footer-left-side{
+    padding: 0;
+    max-width: 525px;
+    flex: 1;
+  }
+
+}
+
+@media(min-width:750px) and (max-width:905px){
+  :root {
+    --section-1-height: 900px /*69.06rem*/;
+    --section-1-top-padding: 170px;
+    --section-1-top-margin: -157px;
+
+    --section-2-height: 1200px;
+    --section-2-top-padding: 230px;
+    --section-2-top-margin: -180px;
+
+    --space-categorie-grid: 15px;
+  }
+}
+
+@media(min-width:860px) and (max-width:905px){
+  
+  .product-categorie-card {
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  .display-part-1 ,
+  .display-part-2 {
+    display: inline-block;
+  }
+
+  .icon {
+    width: 80px;
+    height: auto;
+    margin: 0px 0 0 50px;
+  }
+
+  :root {
+    --section-2-height: 1300px;
+    --section-2-top-padding: 240px;
+  }
+}
+/* 
+next time first edit the pages margins for medium laptops and tablets then see to other things  ----fixed 
+next time dive diretly to the design for the tablet 
+next time look how to layout the product categorie perfectly using flexbox . each element has a min-width and if we stretch the container the flex-item stretch too while preserving the same aspect-ratio
+next time fixe the height of each section 1 and 2 . and fix the problem of the headline on screens >> 600px 
+*/
