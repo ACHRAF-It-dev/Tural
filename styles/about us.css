@@ -746,6 +746,12 @@ footer .button {
 
 }
 
+@media(min-width:600px){
+  .overlay{
+    display: none;
+  }
+}
+
 @media(min-width:600px) and (max-width:860px){
 
   :root {
@@ -826,9 +832,194 @@ footer .button {
     --section-2-top-padding: 240px;
   }
 }
+
+/*design for small phones (320 < width <414 px) ******************************/
+
+@media(min-width:320px) and (max-width:480px){
+  html{
+    font-size: 14px;
+  }
+
+  :root {
+    --body: 1rem;
+    --link: 1rem;
+    --display-xl: 2rem;
+    --headline-xl: 2rem;
+    --caption: 0.875rem;
+    --caption-sm: 0.875rem;
+    --placeholder-md: 1rem;
+    --placeholder-lg: 1.125rem;
+    --title-sm: 0.875rem;
+
+    --page-padding-left-right: 16px; 
+    --section-1-height: 780px /*69.06rem*/;
+    --section-1-top-padding: 150px;
+    --section-1-top-margin: -9.8125rem;
+    --section-2-height: 1500px;
+    --section-2-top-padding: 16.56rem;
+    --section-2-top-margin: -180px;
+    --section-3-top-padding: 100px;
+    --section-3-top-margin: -12.5rem;
+  }
+
+  .nav-bar{
+    display: none;
+  }
+
+  header nav{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .overlay{
+    background-color: white;
+    width: 60%;
+    height: 100vh;
+    padding: 16px 24px 0 ;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+  }
+
+
+  .nav-overlay{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .close-icon{
+    width: 40px;
+    height: auto;
+    align-self: flex-end;
+    margin-bottom: 50px;
+  }
+
+  .overlay{
+    display: none;
+  }
+   
+  .about-company{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .extra-padding-paragraph{
+    padding: 0;
+    margin: 0;
+  }
+
+  .icon{
+    width: 30px;
+    height: auto;
+  }
+  
+  .animation{
+    width: 100%;
+    height: auto;
+  }
+
+  .product-categorie-galerie , 
+  .features-cards-container {
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-categorie-grid);
+  }
+    
+  .product-categorie-card,
+  .feature-card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .product-categorie-container{
+    gap: 70px;
+  }
+
+  .section-heading{
+    margin-bottom: 70px;
+  }
+
+  .feature-card{
+    padding: 35px 16px;
+  }
+
+  .feature-img{
+    width: 48px;
+    height: 48px;
+    margin-bottom: 60px;
+  }
+
+  .our-vision{
+    padding: 50px 16px;
+  }
+
+  .sized-paragraph{
+    width: 100%;
+    text-align: center;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .or-arrow{
+    display: none;
+  }
+
+  .under-line{
+    margin-top: 0px;
+  }
+
+  .left-side-container , 
+  .right-side-container{
+    width: 100%;
+    padding: 50px 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-right-side,
+  .footer-left-side{
+    padding: 0;
+    max-width: 350px; 
+    flex: 1;
+  }
+
+  .map{
+    width: 80%;
+    margin-right: 0;
+  }
+
+}
+
+@media(min-width:360px) and (max-width:480px){
+  :root{
+    --section-1-top-padding: 170px;
+  }
+}
+
+@media(min-width:368px) and (max-width:480px){
+  :root{
+    --section-1-top-padding: 190px;
+  }
+}
+
+@media(min-width:368px) and (max-width:480px){
+  :root{
+    --section-1-top-padding: 180px;
+  }
+}
 /* 
 next time first edit the pages margins for medium laptops and tablets then see to other things  ----fixed 
-next time dive diretly to the design for the tablet 
-next time look how to layout the product categorie perfectly using flexbox . each element has a min-width and if we stretch the container the flex-item stretch too while preserving the same aspect-ratio
-next time fixe the height of each section 1 and 2 . and fix the problem of the headline on screens >> 600px 
+next time dive diretly to the design for the tablet ---- fixed
+next time look how to layout the product categorie perfectly using flexbox . each element has a min-width and if we stretch the container the flex-item stretch too while preserving the same aspect-ratio ----fixed
+next time fixe the height of each section 1 and 2 . and fix the problem of the headline on screens >> 600px---fixed
+layout for small phones .
+adjust the font size for phones layout .
 */
