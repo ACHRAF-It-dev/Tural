@@ -1,3 +1,26 @@
+/* typographie */
+
+.link,
+.btn-placeholder {
+  font-size: var(--link);
+  font-weight: bold;
+  letter-spacing: 0.1px;
+}
+
+.product-name,
+.product-price{
+  font-size: var(--title-sm);
+  font-weight: bold;
+  letter-spacing: -0.15px; 
+}
+
+.action-btn{
+  font-size: 12px;
+  font-weight: 600;
+}
+
 body{
   background-color: var(--surface-main);
 }
+
+/* layout  */
