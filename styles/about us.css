@@ -276,7 +276,7 @@ header::before {
 
 .feature-card {
   width: 15.625rem;
-  height: auto ;
+  height: auto;
   background-color: var(--container-alt-1);
   border-radius: 3.125rem;
   padding: 2.5rem 1.25rem;
@@ -681,8 +681,8 @@ footer .button {
   .animation{
     width: 100%;
     } */
-    
-    /*
+
+  /*
     .product-categorie-galerie {
       width: auto;
       display: grid;//
@@ -694,20 +694,20 @@ footer .button {
     }
     */
 
-  .product-categorie-galerie , 
+  .product-categorie-galerie,
   .features-cards-container {
     width: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-categorie-grid);
   }
-    
+
   .product-categorie-card {
     width: 250px;
     height: 250px;
   }
 
-  .feature-card{
+  .feature-card {
     width: 250px;
     height: 250px;
   }
@@ -717,17 +717,15 @@ footer .button {
     text-align: center;
     margin-top: 1.25rem; /*this targets only one paragraph to set up the correct distance between it and a heading*/
   }
-
 }
 
-@media(min-width:600px){
-  .overlay{
+@media (min-width: 600px) {
+  .overlay {
     display: none;
   }
 }
 
-@media(min-width:600px) and (max-width:860px){
-
+@media (min-width: 600px) and (max-width: 860px) {
   :root {
     --section-1-height: 865px /*69.06rem*/;
     --section-1-top-padding: 170px;
@@ -738,21 +736,21 @@ footer .button {
     --section-2-top-margin: -180px;
   }
 
-  .about-company{
-    margin-bottom:90px ;
+  .about-company {
+    margin-bottom: 90px;
   }
 
-  footer{
+  footer {
     display: flex;
     flex-direction: column;
   }
 
-  .or-arrow{
+  .or-arrow {
     display: none;
   }
 
-  .left-side-container , 
-  .right-side-container{
+  .left-side-container,
+  .right-side-container {
     width: 100%;
     padding: 100px 100px;
     display: flex;
@@ -761,15 +759,14 @@ footer .button {
   }
 
   .footer-right-side,
-  .footer-left-side{
+  .footer-left-side {
     padding: 0;
     max-width: 525px;
     flex: 1;
   }
-
 }
 
-@media(min-width:750px) and (max-width:905px){
+@media (min-width: 750px) and (max-width: 905px) {
   :root {
     --section-1-height: 900px /*69.06rem*/;
     --section-1-top-padding: 170px;
@@ -783,14 +780,13 @@ footer .button {
   }
 }
 
-@media(min-width:860px) and (max-width:905px){
-  
+@media (min-width: 860px) and (max-width: 905px) {
   .product-categorie-card {
     min-width: 300px;
     min-height: 300px;
   }
 
-  .display-part-1 ,
+  .display-part-1,
   .display-part-2 {
     display: inline-block;
   }
@@ -809,8 +805,8 @@ footer .button {
 
 /*design for small phones (320 < width <414 px) ******************************/
 
-@media(min-width:320px) and (max-width:480px){
-  html{
+@media (min-width: 320px) and (max-width: 480px) {
+  html {
     font-size: 14px;
   }
 
@@ -825,7 +821,7 @@ footer .button {
     --placeholder-lg: 1.125rem;
     --title-sm: 0.875rem;
 
-    --page-padding-left-right: 16px; 
+    --page-padding-left-right: 16px;
     --section-1-height: 780px /*69.06rem*/;
     --section-1-top-padding: 150px;
     --section-1-top-margin: -9.8125rem;
@@ -836,121 +832,120 @@ footer .button {
     --section-3-top-margin: -12.5rem;
   }
 
-  .nav-bar{
+  .nav-bar {
     display: none;
   }
 
-  header nav{
+  header nav {
     display: flex;
     justify-content: flex-end;
   }
 
-  .overlay{
+  .overlay {
     background-color: white;
     width: 60%;
     height: 100vh;
-    padding: 16px 24px 0 ;
+    padding: 16px 24px 0;
     display: flex;
     flex-direction: column;
     /* align-items: flex-end; */
   }
 
-
-  .nav-overlay{
+  .nav-overlay {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .close-icon{
+  .close-icon {
     width: 40px;
     height: auto;
     align-self: flex-end;
     margin-bottom: 50px;
   }
 
-  .overlay{
+  .overlay {
     display: none;
   }
-   
-  .about-company{
+
+  .about-company {
     display: flex;
     flex-direction: column;
     gap: 50px;
     margin-bottom: 50px;
   }
 
-  .extra-padding-paragraph{
+  .extra-padding-paragraph {
     padding: 0;
     margin: 0;
   }
 
-  .icon{
+  .icon {
     width: 30px;
     height: auto;
   }
-  
-  .animation{
+
+  .animation {
     width: 100%;
     height: auto;
   }
 
-  .product-categorie-galerie , 
+  .product-categorie-galerie,
   .features-cards-container {
     width: auto;
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--space-categorie-grid);
   }
-    
+
   .product-categorie-card,
   .feature-card {
     width: 200px;
     height: 200px;
   }
 
-  .product-categorie-container{
+  .product-categorie-container {
     gap: 70px;
   }
 
-  .section-heading{
+  .section-heading {
     margin-bottom: 70px;
   }
 
-  .feature-card{
+  .feature-card {
     padding: 35px 16px;
   }
 
-  .feature-img{
+  .feature-img {
     width: 48px;
     height: 48px;
     margin-bottom: 60px;
   }
 
-  .our-vision{
+  .our-vision {
     padding: 50px 16px;
   }
 
-  .sized-paragraph{
+  .sized-paragraph {
     width: 100%;
     text-align: center;
   }
 
-  footer{
+  footer {
     display: flex;
     flex-direction: column;
   }
 
-  .or-arrow{
+  .or-arrow {
     display: none;
   }
 
-  .under-line{
+  .under-line {
     margin-top: 0px;
   }
 
-  .left-side-container , 
-  .right-side-container{
+  .left-side-container,
+  .right-side-container {
     width: 100%;
     padding: 50px 16px;
     display: flex;
@@ -959,33 +954,32 @@ footer .button {
   }
 
   .footer-right-side,
-  .footer-left-side{
+  .footer-left-side {
     padding: 0;
-    max-width: 350px; 
+    max-width: 350px;
     flex: 1;
   }
 
-  .map{
+  .map {
     width: 80%;
     margin-right: 0;
   }
-
 }
 
-@media(min-width:360px) and (max-width:480px){
-  :root{
+@media (min-width: 360px) and (max-width: 480px) {
+  :root {
     --section-1-top-padding: 170px;
   }
 }
 
-@media(min-width:368px) and (max-width:480px){
-  :root{
+@media (min-width: 368px) and (max-width: 480px) {
+  :root {
     --section-1-top-padding: 190px;
   }
 }
 
-@media(min-width:368px) and (max-width:480px){
-  :root{
+@media (min-width: 368px) and (max-width: 480px) {
+  :root {
     --section-1-top-padding: 180px;
   }
 }
