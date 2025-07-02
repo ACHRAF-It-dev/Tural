@@ -31,7 +31,7 @@
 
 .action-btn {
   font-family: "Poppins", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--on-surface-link);
   border: none;
@@ -115,4 +115,114 @@ header {
   justify-content: space-around;
 }
 
+.overlay {
+  background-color: white;
+  width: 60%;
+  height: 100vh;
+  padding: 16px 24px 0;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+}
+
+.nav-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 /*add responsiveness to the page */
+
+@media (min-width : 1440px){
+  html{
+    font-size: 18px;
+  }
+  body{
+    padding: 24px 128px;
+  }
+}
+
+/* adjusting the page marging according to screen's width */
+
+@media(min-width : 1535px){
+  body{
+    max-width: 1530px;
+    margin: 0 auto;
+  }
+}
+
+@media(min-width : 1786px){
+  body{
+    max-width: 1786px;
+    margin: 0 auto;
+  }
+
+  .store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1023px){
+  html{
+    font-size: 15.5px;
+  }
+
+  .store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+}
+
+@media (min-width: 480px) and (max-width:767px){
+  html{
+    font-size: 15px;
+  }
+
+  body{
+    padding: 24px 32px;
+  }
+
+  .store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width:480px){
+  html{
+    font-size: 14px;
+  }
+
+  body{
+    padding: 24px 16px;
+  }
+
+  .store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+  }
+
+  .order-btn{
+    display: none;
+  }
+}
+
+@media (min-width: 366px) and (max-width:480px){
+  .store {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+  }
+}
+
+@media(max-width:925px){
+  .nav-bar{
+    display: none;
+  }
+}
