@@ -99,9 +99,24 @@ header{
   justify-content: space-between;
 }
 
-.heart-icon{
-  width: 33px;
-  aspect-ratio: 1/1;
+.like-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.heart-icon path{
+  stroke: black;
+}
+
+.heart-icon path:hover{
+  fill: red;
+  stroke: red;
+}
+
+.like-btn-clicked .heart-icon path{
+  fill: red;
+  stroke: red;
 }
 
 .order-btn{

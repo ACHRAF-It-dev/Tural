@@ -1,7 +1,11 @@
 /* typographie */
+html{
+  scroll-behavior:smooth;
+}
 
 .link,
-.btn-placeholder {
+.input-placeholder,
+.input-placeholder::placeholder {
   font-size: var(--link);
   letter-spacing: 0.1px;
 }
@@ -11,10 +15,15 @@
   font-weight: bold;
 }
 
-.btn-placeholder {
+.input-placeholder,
+.input-placeholder::placeholder {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   color: #cfcfcf;
+}
+
+.input-placeholder{
+  color: black;
 }
 
 .product-name,
@@ -32,6 +41,26 @@
   text-overflow:ellipsis;  /* add the "…" when text is too long */
 }
 
+.like-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.heart-icon path{
+  stroke: black;
+}
+
+.heart-icon path:hover{
+  fill: red;
+  stroke: red;
+}
+
+.like-btn-clicked .heart-icon path{
+  fill: red;
+  stroke: red;
+}
+
 .action-btn {
   font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
@@ -39,11 +68,18 @@
   color: var(--on-surface-link);
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.saved-items,
+.our-products{
+  cursor: pointer;
 }
 
 body {
   background-color: var(--surface-main);
 }
+
 
 /* layout  */
 
@@ -58,6 +94,21 @@ header {
   margin-bottom: 80px;
 }
 
+.input-wrapper{
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon{
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  z-index: 10;
+  margin: 0 -20px 0 0;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
@@ -69,7 +120,7 @@ header {
   padding: 10px 15px;
 }
 
-.btn-placeholder {
+.input-placeholder{
   background-color: #f7f7f7;
   border: none;
   border-radius: 10px;
@@ -88,7 +139,7 @@ header {
 
 .store {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
 }
 
@@ -162,7 +213,7 @@ header {
 
   .store {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 1rem;
   }
 }
@@ -174,7 +225,7 @@ header {
 
   .store {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1rem;
   }
 
@@ -191,7 +242,7 @@ header {
 
   .store {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1rem;
   }
 }
@@ -207,7 +258,7 @@ header {
 
   .store {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
     gap: 1rem;
   }
 
@@ -219,7 +270,7 @@ header {
 @media (min-width: 366px) and (max-width:480px){
   .store {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 1rem;
   }
 }
