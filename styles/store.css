@@ -13,6 +13,10 @@ html{
 .link {
   color: var(--on-surface-link);
   font-weight: bold;
+  transition: color .5s ease-out;
+}
+.link:hover{
+  color: blue;
 }
 
 .input-placeholder,
@@ -61,7 +65,8 @@ html{
   stroke: red;
 }
 
-.action-btn {
+.action-btn,
+.hover-effect {
   font-family: "Poppins", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
@@ -69,6 +74,12 @@ html{
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: color .3s ease-out;
+}
+
+.action-btn:hover,
+.hover-effect:hover{
+  color: blue;
 }
 
 .saved-items,
@@ -84,14 +95,31 @@ body {
 /* layout  */
 
 body {
-  padding: 24px 64px; /*use token here*/
+  padding: 0px 64px; /*use token here*/
+}
+
+main{
+  padding-top: 120px;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 header {
+  /* margin: 0 auto; */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 80px;
+  width: 100%;
+  background-color: var(--surface-main);
+  /* padding: 10px 64px; */
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  /* left: 0; */
 }
 
 .input-wrapper{
@@ -135,6 +163,7 @@ header {
   margin-bottom: 80px;
 }
 
+
 /*cards layout*/
 
 .store {
@@ -171,18 +200,77 @@ header {
 
 .overlay {
   background-color: white;
-  width: 60%;
+  z-index: 1500; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
   height: 100vh;
-  padding: 16px 24px 0;
+  /* padding: 16px 24px 0; */
+  /* padding: 124px 64px; */
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
+  /* justify-content: center; */
 }
 
 .nav-overlay {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  align-self: center;
+  margin-top: 100px;
+}
+
+.close-icon{
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+
+.close-btn{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  width: 50px;
+  aspect-ratio: 1/1;
+  margin-bottom: 100px;
+  align-self: flex-end;
+}
+
+.humburger-btn{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  aspect-ratio: 1/1;
+  z-index: 2000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-right: 64px;
+}
+
+.humburger-icon{
+  width: 50px;
+  aspect-ratio: 1/1;
+  z-index: 2000;
+}
+
+.hide{
+  display: none;
+}
+
+.display{
+  background-color: white;
+  z-index: 1500; 
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  /* padding: 16px 24px 0; */
+  padding: 124px 64px;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 
 /*add responsiveness to the page */
@@ -194,13 +282,25 @@ header {
   body{
     padding: 24px 128px;
   }
+  header{
+    padding: 10px 128px;
+  }
 }
 
 /* adjusting the page marging according to screen's width */
 
 @media(min-width : 1535px){
+  html{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
   body{
     max-width: 1530px;
+    margin: 0 auto;
+  }
+  header{
+    max-width: 1480px;
     margin: 0 auto;
   }
 }
@@ -211,10 +311,21 @@ header {
     margin: 0 auto;
   }
 
+  /* header{
+    max-width: 1786px;
+    margin: 0 auto;
+  } */
+
   .store {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     gap: 1rem;
+  }
+}
+
+@media (min-width: 1023px) and (max-width:1440px){
+  header{
+    padding: 10px 64px;
   }
 }
 
@@ -229,6 +340,10 @@ header {
     gap: 1rem;
   }
 
+  header{
+    padding:10px 64px;
+  }
+
 }
 
 @media (min-width: 480px) and (max-width:767px){
@@ -236,8 +351,29 @@ header {
     font-size: 15px;
   }
 
-  body{
+  body,
+  .overlay{
     padding: 24px 32px;
+  }
+
+  header{
+    padding: 10px 32px;
+  }
+
+  .overlay{
+    width: 45%;
+  }
+
+  .close-icon,
+  .close-btn,
+  .humburger-btn,
+  .humburger-icon{
+    width: 40px;
+    aspect-ratio: 1/1;
+  }
+
+  .humburger-btn{
+    margin-right: 32px;
   }
 
   .store {
@@ -252,8 +388,29 @@ header {
     font-size: 14px;
   }
 
-  body{
+  body,
+  .overlay{
     padding: 24px 16px;
+  }
+
+  .humburger-btn{
+    margin-right: 16px;
+  }
+
+  header{
+    padding: 10px 16px;
+  }
+
+  .overlay{
+    width:70%;
+  }
+
+  .close-icon,
+  .close-btn,
+  .humburger-btn,
+  .humburger-icon{
+    width: 40px;
+    aspect-ratio: 1/1;
   }
 
   .store {
@@ -277,6 +434,13 @@ header {
 
 @media(max-width:925px){
   .nav-bar{
+    display: none;
+  }
+}
+
+@media(min-width:925px){
+  .humburger-btn,
+  .overlay{
     display: none;
   }
 }

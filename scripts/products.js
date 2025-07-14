@@ -1,16 +1,32 @@
 import products from "../data/data.js";
 // import {userSaved} from "../scripts/saved-items.js";
 export const userSaved = JSON.parse(localStorage.getItem('savedItems')) || [];
+let searchResult = [];
+
+function initialzingSearchResult(){
+products.forEach(product=>{
+  searchResult.push(product.id);
+})}
+
+initialzingSearchResult();
+
+let searchBarClass = document.querySelector('.search-bar');
+let sortBtnId = document.querySelector('#sort');
 
 export function saveToLocalStorage(){
   localStorage.setItem('savedItems',JSON.stringify(userSaved));
 }
 
-// let savedItemsClass = document.querySelector('.saved-items');
-let store = document.querySelector('.store') ;
-// let ourProductsClass = document.querySelector('.our-products'); 
-let storeHtml = '';
+function saveSearchInput(){
+  localStorage.setItem('search',searchBarClass.value);
+}
 
+// let savedItemsClass = document.querySelector('.saved-items');
+// let ourProductsClass = document.querySelector('.our-products'); 
+/*
+let store = document.querySelector('.store') ;
+let storeHtml = '';
+*/
 
 export function retrieveProductInfo(products , id){
   for (let element of products){
@@ -22,10 +38,6 @@ export function retrieveProductInfo(products , id){
 
 function productCardHtml(product){
   let saved = '';
-  // let cameFromSavedProduct = '';
-  // if (document.title === 'Saved items'){
-  //   cameFromSavedProduct = 'saved';
-  // }
   if (userSaved.indexOf(product.id) !== -1){ saved = 'like-btn-clicked'}else{saved = ''}
   return `<div class="card" id="product-${product.id}">
           <img
@@ -44,45 +56,43 @@ function productCardHtml(product){
             </div>
             <div class="action-btns-container">
             <button class="action-btn order-btn">Order now</button>
-              <button class="action-btn more-details"><a href="../Html index/product details.html?id=${product.id}&page=${document.title}">More details</a></button>
+              <button class="action-btn more-details"><a class="hover-effect" href="../Html index/product details.html?id=${product.id}&page=${document.title}">More details</a></button>
             </div>
           </div>
         </div>`;
 }
 
+function likeBtnEventListener(){
+  document.querySelectorAll('.like-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      let {productId} = button.dataset;
+      if( button.classList.contains('like-btn-clicked') ){
+       button.classList.remove('like-btn-clicked');
+       let index = userSaved.
+       indexOf(productId);
+       if (index !== -1){
+         userSaved.splice(index,1);
+       }
+      }else{
+       button.classList.add('like-btn-clicked');
+       userSaved.push(productId);
+      }
+      saveToLocalStorage();
+    });
+  })
+}
 
 
 function renderingProducts(products){
-  storeHtml = '';
+  let store = document.querySelector('.store') ;
+  let storeHtml = '';
   products.forEach( product => {
     storeHtml += productCardHtml(product);
   })
   if(store){
 store.innerHTML = storeHtml ;
 }
-document.querySelectorAll('.like-btn').forEach(button => {
-  button.addEventListener('click', () => {
-    let {productId} = button.dataset;
-    let product = retrieveProductInfo(products , productId);
-    if( button.classList.contains('like-btn-clicked') ){
-     product.isSaved = 'false';
-     button.classList.remove('like-btn-clicked');
-     let index = userSaved.
-     indexOf(productId);
-     if (index !== -1){
-       userSaved.splice(index,1);
-     }
-    //  console.log(userSaved);
-    }else{
-      product.isSaved = 'true'; 
-     button.classList.add('like-btn-clicked');
-     userSaved.push(productId);
-    //  console.log(userSaved);
-    }
-    saveToLocalStorage();
-    // console.log(products);
-  });
-});
+likeBtnEventListener();
 }
 
 // function renderingSavedProducts(){
@@ -131,5 +141,124 @@ document.querySelectorAll('.like-btn').forEach(button => {
 // }
 
 
-renderingProducts(products);
-console.log(userSaved);
+function search(userInput){
+  let store = document.querySelector('.store') ;
+  store.innerHTML = '';
+  let storeHtml = '';
+  sortBtnId.value = 'default';
+  searchResult = [];
+  let fuse = new Fuse(products, {
+    keys:['name','tags'],
+    threshold: 0.4
+  })
+  let result = fuse.search(userInput);
+  result.forEach(item=>{
+    storeHtml += productCardHtml(item.item) ;
+    searchResult.push(item.item.id);
+  })
+  store.innerHTML = storeHtml;
+  likeBtnEventListener();
+}
+
+if(searchBarClass){
+searchBarClass.addEventListener('input',(e)=>{
+  let input = e.target.value;
+  saveSearchInput();
+  if(input !== ''){
+  search(input);
+  }else{
+   renderingProducts(products);
+  }
+});
+}
+
+
+if(sortBtnId){
+  sortBtnId.addEventListener('change',()=>{
+    let sortby = sortBtnId.value;
+    console.log(searchResult);
+    if (sortby === 'price-low-high'){
+      // console.log('I am here');
+      for (let i = 0; i < searchResult.length - 1; i++) {
+        for (let j = i + 1; j < searchResult.length; j++) {
+          const product1 = retrieveProductInfo(products, searchResult[i]);
+          const product2 = retrieveProductInfo(products, searchResult[j]);
+          if (Number(product1.price) > Number(product2.price)) {
+            [searchResult[i], searchResult[j]] = [searchResult[j], searchResult[i]];
+          }
+        }
+      }
+        console.log(`the new array `);
+        console.log(searchResult);
+     }else if (sortby === 'price-high-low'){
+      for (let i = 0; i < searchResult.length - 1; i++) {
+        for (let j = i + 1; j < searchResult.length; j++) {
+          const product1 = retrieveProductInfo(products, searchResult[i]);
+          const product2 = retrieveProductInfo(products, searchResult[j]);
+          if (Number(product1.price) < Number(product2.price)) {
+            [searchResult[i], searchResult[j]] = [searchResult[j], searchResult[i]];
+          }
+        }
+      }
+     }else if (sortby === 'name-a-z') {
+      for (let i = 0; i < searchResult.length - 1; i++) {
+        for (let j = i + 1; j < searchResult.length; j++) {
+          const product1 = retrieveProductInfo(products, searchResult[i]);
+          const product2 = retrieveProductInfo(products, searchResult[j]);
+          if (product1.name.toLowerCase().localeCompare(product2.name.toLowerCase()) > 0) {
+            [searchResult[i], searchResult[j]] = [searchResult[j], searchResult[i]];
+          }
+        }
+      }
+    }if (sortby === 'name-z-a') {
+      for (let i = 0; i < searchResult.length - 1; i++) {
+        for (let j = i + 1; j < searchResult.length; j++) {
+          const product1 = retrieveProductInfo(products, searchResult[i]);
+          const product2 = retrieveProductInfo(products, searchResult[j]);
+          if (product1.name.toLowerCase().localeCompare(product2.name.toLowerCase()) < 0) {
+            [searchResult[i], searchResult[j]] = [searchResult[j], searchResult[i]];
+          }
+        }
+      }
+    }
+     renderingSortProducts()
+    })
+  }
+
+
+function renderingSortProducts(){ 
+  let store = document.querySelector('.store') ;
+  let storeHtml = '';
+  searchResult.forEach(productId => {
+    let product = retrieveProductInfo(products ,productId);
+    storeHtml += productCardHtml(product);
+  });
+  store.innerHTML = storeHtml;
+  likeBtnEventListener();
+}
+
+
+searchBarClass.value= localStorage.getItem('search');
+if (searchBarClass.value){
+  search(searchBarClass.value);
+}else{
+  renderingProducts(products);
+}
+
+let humburgerBtn = document.querySelector('.humburger-btn1');
+let overly = document.querySelector('.overlay1');
+let humburgerIcon = document.querySelector('.humburger-icon1');
+
+if(humburgerBtn){
+  humburgerBtn.addEventListener('click',()=>{
+    if(overly.classList.contains('hide')){
+      overly.classList.remove('hide');
+      overly.classList.add('display');
+      humburgerIcon.src ='../assets/svgs/close icon.svg';
+    }else{
+      overly.classList.remove('display');
+      overly.classList.add('hide');
+      humburgerIcon.src ='../assets/svgs/square.svg';
+    }
+  })
+}

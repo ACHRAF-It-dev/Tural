@@ -12,36 +12,57 @@
     <link rel="stylesheet" href="../styles/reset.css" />
     <link rel="stylesheet" href="../styles/tokens.css" />
     <link rel="stylesheet" href="../styles/store.css" />
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
     <script type="module" defer src="../scripts/products.js"></script>
     <title>Store</title>
   </head>
   <body>
-    <header>
-      <div class="input-wrapper">
-        <!-- <img class="search-icon" src="../assets/svgs/Search icon.svg" alt="" /> -->
-        <input class="search-bar input-placeholder" type="text" placeholder="Search">
-      </div>
-      <nav>
+    <div class="overlay hide overlay1">
+      <ul class="nav-overlay">
+        <li><a href="" class="link">Our products</a></li>
+        <li><a href="../Html index/saved items.html" class="link">Saved Items</a></li>
+        <li><a href="../Html index/about us.html" class="link">About us</a></li>
+      </ul>
+    </div>
+    
+    <div class="container">
+      <header>
+        <div class="input-wrapper">
+          <input
+          class="search-bar input-placeholder"
+          type="text"
+          placeholder="Search"
+          />
+        </div>
         <ul class="nav-bar">
           <li><a class="link our-products" href="">Our products</a></li>
-          <li><a class="link saved-items" href="../Html index/saved items.html">Saved Items</a></li>
-          <li><a class="link" href="../Html index/about us.html">About us</a></li>
+          <li>
+            <a class="link saved-items" href="../Html index/saved items.html"
+            >Saved Items</a
+            >
+          </li>
+          <li>
+            <a class="link" href="../Html index/about us.html">About us</a>
+          </li>
         </ul>
-
-        <!-- <div class="overlay">
-          <img class="close-icon" src="../assets/svgs/close icon.svg" alt="">
-          <ul class="nav-overlay">
-            <li class="link"><a href="">Our products</a></li>
-            <li class="link"><a href="">Saved Items</a></li>
-            <li class="link"><a href="">About us</a></li>
-          </ul>
-        </div> -->
-      </nav>
-    </header>
-    <main>
-      <button class="sorted-by input-placeholder">
-        <img src="../assets/svgs/dropdown-arrow.svg" alt="" />Sorted by
+      </header>
+      <button class="humburger-btn humburger-btn1">
+        <img class="humburger-icon humburger-icon1" src="../assets/svgs/square.svg" alt="" />
       </button>
+    </div>
+    <main>
+      <select
+        id="sort"
+        name="sort"
+        class="sort-dropdown sorted-by input-placeholder"
+      >
+        <option class="default-sort" value="default">sort: default</option>
+        <option value="price-low-high">Price: Low to High</option>
+        <option value="price-high-low">Price: High to Low</option>
+        <option value="name-a-z">Name: A–Z</option>
+        <option value="name-z-a">Name: Z–A</option>
+      </select>
+
       <div class="store">
         <!-- <div class="card">
           <img

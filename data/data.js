@@ -1,7 +1,6 @@
 export const products = [
   {
     "id":"1",
-    "isSaved":"false",
     "name":"Ferari",
     "tagline":" Just do it.",
     "price":"299.99",
@@ -24,11 +23,11 @@ export const products = [
       '../assets/products pictures/car.png',
       '../assets/products pictures/car.png',
       '../assets/products pictures/car.png'
-    ]
+    ],
+    "tags": ["car", "hybrid", "automatic", "black", "sports car", "vehicle", "150hp", "luxury"]
   },
   {
     "id": "2",
-    "isSaved":"false",
     "name": "SleekVision Sunglasses",
     "tagline": "See the world in style.",
     "price": "49.99",
@@ -47,11 +46,11 @@ export const products = [
     "images":[
       '../assets/products pictures/black glasses.png',
       '../assets/products pictures/black glasses.png',
-    ]
+    ],
+    "tags": ["sunglasses", "aviator", "metal", "polarized", "silver", "eyewear", "UV", "accessory"]
   },
   {
-  "id": "3",
-  "isSaved":"false",
+    "id": "3",
     "name": "StrideMax Running Shoes",
     "tagline": "Built for motion.",
     "price": "89.99",
@@ -71,11 +70,11 @@ export const products = [
       '../assets/products pictures/sport shoes.png',
       '../assets/products pictures/sport shoes.png',
       '../assets/products pictures/sport shoes.png'
-    ]
+    ],
+     "tags": ["shoes", "running", "trail", "mesh", "red", "grip", "sport", "rubber"]
   },
   {
     "id": "4",
-    "isSaved":"false",
     "name": "TechPro X15 Laptop",
     "tagline": "Power meets portability.",
     "price": "1199.00",
@@ -94,11 +93,11 @@ export const products = [
     "images":[
       '../assets/products pictures/sport shoes.png',
       '../assets/products pictures/sport shoes.png'
-    ]
+    ],
+    "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
   },
   {
     "id": "5",
-    "isSaved":"false",
     "name": "UrbanTrail Backpack",
     "tagline": "Carry everything. Go anywhere.",
     "price": "74.95",
@@ -122,7 +121,6 @@ export const products = [
   },
   {
     "id": "6",
-    "isSaved":"false",
     "name": "SleekVision Sunglasses",
     "tagline": "See the world in style.",
     "price": "49.99",
@@ -141,11 +139,11 @@ export const products = [
     "images":[
       '../assets/products pictures/black glasses.png',
       '../assets/products pictures/black glasses.png',
-    ]
+    ],
+    "tags": ["lotion", "skincare", "lavender", "moisturizer", "hydrating", "body", "wellness", "soft skin"]
   },
   {
     "id": "7",
-    "isSaved":"false",
     "name": "SleekVision Sunglasses",
     "tagline": "See the world in style.",
     "price": "49.99",
@@ -164,11 +162,11 @@ export const products = [
     "images":[
       '../assets/products pictures/black glasses.png',
       '../assets/products pictures/black glasses.png',
-    ]
+    ],
+    "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
   },
   {
     "id": "8",
-    "isSaved":"false",
     "name": "SleekVision Sunglasses",
     "tagline": "See the world in style.",
     "price": "49.99",
@@ -187,11 +185,11 @@ export const products = [
   "images":[
     '../assets/products pictures/black glasses.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
 },
 {
   "id":"9",
-  "isSaved":"false",
   "name":"Ferari",
   "tagline":" Just do it.",
   "price":"299.99",
@@ -214,11 +212,11 @@ export const products = [
     '../assets/products pictures/car.png',
     '../assets/products pictures/car.png',
     '../assets/products pictures/car.png'
-  ]
+  ],
+  "tags": ["car", "hybrid", "automatic", "black", "sports car", "vehicle", "150hp", "luxury"]
 },
 {
   "id": "10",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -237,11 +235,11 @@ export const products = [
   "images":[
     '../assets/products pictures/black glasses.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["sunglasses", "aviator", "metal", "polarized", "silver", "eyewear", "UV", "accessory"]
 },
 {
-"id": "11",
-"isSaved":"false",
+  "id": "11",
   "name": "StrideMax Running Shoes",
   "tagline": "Built for motion.",
   "price": "89.99",
@@ -261,11 +259,11 @@ export const products = [
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png'
-  ]
+  ],
+   "tags": ["shoes", "running", "trail", "mesh", "red", "grip", "sport", "rubber"]
 },
 {
   "id": "12",
-  "isSaved":"false",
   "name": "TechPro X15 Laptop",
   "tagline": "Power meets portability.",
   "price": "1199.00",
@@ -284,11 +282,11 @@ export const products = [
   "images":[
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png'
-  ]
+  ],
+  "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
 },
 {
   "id": "13",
-  "isSaved":"false",
   "name": "UrbanTrail Backpack",
   "tagline": "Carry everything. Go anywhere.",
   "price": "74.95",
@@ -308,11 +306,11 @@ export const products = [
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png'
-  ]
+  ],
+  "tags": ["lotion", "skincare", "lavender", "moisturizer", "hydrating", "body", "wellness", "soft skin"]
 },
 {
   "id": "14",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -331,11 +329,11 @@ export const products = [
   "images":[
     '../assets/products pictures/black glasses.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
 },
 {
   "id": "15",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -354,11 +352,11 @@ export const products = [
   "images":[
     '../assets/products pictures/black glasses.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
 },
 {
   "id": "16",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -377,11 +375,11 @@ export const products = [
 "images":[
   '../assets/products pictures/black glasses.png',
   '../assets/products pictures/black glasses.png',
-]
+],
+"tags": ["lotion", "skincare", "lavender", "moisturizer", "hydrating", "body", "wellness", "soft skin"]
 },
 {
   "id":"17",
-  "isSaved":"false",
   "name":"Ferari",
   "tagline":" Just do it.",
   "price":"299.99",
@@ -404,11 +402,11 @@ export const products = [
     '../assets/products pictures/car.png',
     '../assets/products pictures/car.png',
     '../assets/products pictures/car.png'
-  ]
+  ],
+  "tags": ["car", "hybrid", "automatic", "black", "sports car", "vehicle", "150hp", "luxury"]
 },
 {
   "id": "18",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -427,11 +425,11 @@ export const products = [
   "images":[
     '../assets/products pictures/black glasses.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["sunglasses", "aviator", "metal", "polarized", "silver", "eyewear", "UV", "accessory"]
 },
 {
-"id": "19",
-"isSaved":"false",
+  "id": "19",
   "name": "StrideMax Running Shoes",
   "tagline": "Built for motion.",
   "price": "89.99",
@@ -451,11 +449,11 @@ export const products = [
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png'
-  ]
+  ],
+   "tags": ["shoes", "running", "trail", "mesh", "red", "grip", "sport", "rubber"]
 },
 {
   "id": "20",
-  "isSaved":"false",
   "name": "TechPro X15 Laptop",
   "tagline": "Power meets portability.",
   "price": "1199.00",
@@ -474,11 +472,11 @@ export const products = [
   "images":[
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png'
-  ]
+  ],
+  "tags": ["lotion", "skincare", "lavender", "moisturizer", "hydrating", "body", "wellness", "soft skin"]
 },
 {
   "id": "21",
-  "isSaved":"false",
   "name": "UrbanTrail Backpack",
   "tagline": "Carry everything. Go anywhere.",
   "price": "74.95",
@@ -498,11 +496,11 @@ export const products = [
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png',
     '../assets/products pictures/sport shoes.png'
-  ]
+  ],
+  "tags": ["lotion", "skincare", "lavender", "moisturizer", "hydrating", "body", "wellness", "soft skin"]
 },
 {
   "id": "22",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -521,11 +519,11 @@ export const products = [
   "images":[
     '../assets/products pictures/body lotion.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["lotion", "skincare", "lavender", "moisturizer", "hydrating", "body", "wellness", "soft skin"]
 },
 {
   "id": "23",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -544,11 +542,11 @@ export const products = [
   "images":[
     '../assets/products pictures/black glasses.png',
     '../assets/products pictures/black glasses.png',
-  ]
+  ],
+  "tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
 },
 {
   "id": "24",
-  "isSaved":"false",
   "name": "SleekVision Sunglasses",
   "tagline": "See the world in style.",
   "price": "49.99",
@@ -567,7 +565,9 @@ export const products = [
 "images":[
   '../assets/products pictures/black glasses.png',
   '../assets/products pictures/black glasses.png',
-]
+],
+"tags": ["smartwatch", "wearable", "tech", "black", "AMOLED", "fitness", "gadget", "Bluetooth"]
 },
 ]
+
 export default products ;
