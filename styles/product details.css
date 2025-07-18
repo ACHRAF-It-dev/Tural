@@ -56,6 +56,7 @@ header{
   border-radius: 20px;
   aspect-ratio: 1/1;
   overflow: hidden;
+  position: relative;
 }
 
 .product-image{
@@ -141,6 +142,40 @@ header{
   margin-left: -16px;
 }
 
+.change-picture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  padding: 30px 20px 30px 15px;
+  top: 39.46%;
+  transition: all 0.3s ease-out;
+  border-radius: 40px;
+  background-color: white;
+  opacity: 0;
+}
+
+.forward-change-picture{
+  right: 0;
+}
+
+.change-picture-arrow{
+  fill: white;
+  transition: color 0.3s ease-out;
+  width :33px; 
+  height :53px;
+}
+
+.full-opacity{
+  opacity: 100%;
+}
+
+.color-changing{
+  fill: #A8A8A8;
+}
+
 /* add responsiveness */
 
 @media (min-width : 1440px){
@@ -209,6 +244,15 @@ header{
     margin-left: -8px;
     width: 32px;
     aspect-ratio: 1/1;
+  }
+
+  .change-picture-arrow{
+    width: 20px;
+    aspect-ratio: 1/1;
+  }
+
+  .change-picture{
+    padding: 10px 15px 10px 10px;
   }
 }
 

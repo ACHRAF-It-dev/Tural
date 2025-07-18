@@ -226,6 +226,10 @@ header {
   aspect-ratio: 1/1;
 }
 
+.default-sort{
+  color: #cfcfcf;
+}
+
 .close-btn{
   background-color: transparent;
   cursor: pointer;

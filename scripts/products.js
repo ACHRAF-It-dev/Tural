@@ -145,6 +145,7 @@ function search(userInput){
   let store = document.querySelector('.store') ;
   store.innerHTML = '';
   let storeHtml = '';
+  sortBtnId.classList.add('default-sort');
   sortBtnId.value = 'default';
   searchResult = [];
   let fuse = new Fuse(products, {
@@ -176,9 +177,8 @@ searchBarClass.addEventListener('input',(e)=>{
 if(sortBtnId){
   sortBtnId.addEventListener('change',()=>{
     let sortby = sortBtnId.value;
-    console.log(searchResult);
+    sortBtnId.classList.remove('default-sort');
     if (sortby === 'price-low-high'){
-      // console.log('I am here');
       for (let i = 0; i < searchResult.length - 1; i++) {
         for (let j = i + 1; j < searchResult.length; j++) {
           const product1 = retrieveProductInfo(products, searchResult[i]);
@@ -188,8 +188,6 @@ if(sortBtnId){
           }
         }
       }
-        console.log(`the new array `);
-        console.log(searchResult);
      }else if (sortby === 'price-high-low'){
       for (let i = 0; i < searchResult.length - 1; i++) {
         for (let j = i + 1; j < searchResult.length; j++) {
@@ -237,12 +235,13 @@ function renderingSortProducts(){
   likeBtnEventListener();
 }
 
-
+if(searchBarClass){
 searchBarClass.value= localStorage.getItem('search');
 if (searchBarClass.value){
   search(searchBarClass.value);
 }else{
   renderingProducts(products);
+}
 }
 
 let humburgerBtn = document.querySelector('.humburger-btn1');
@@ -262,3 +261,5 @@ if(humburgerBtn){
     }
   })
 }
+
+

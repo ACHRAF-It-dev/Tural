@@ -21,7 +21,7 @@ export const products = [
     },
     "images":[
       '../assets/products pictures/car.png',
-      '../assets/products pictures/car.png',
+      '../assets/products pictures/black glasses.png',
       '../assets/products pictures/car.png'
     ],
     "tags": ["car", "hybrid", "automatic", "black", "sports car", "vehicle", "150hp", "luxury"]

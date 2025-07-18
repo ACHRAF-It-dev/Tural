@@ -82,6 +82,7 @@ function search(userInput){
   let store = document.querySelector('.store');
   store.innerHTML = '';
   let storeHtml = '';
+  sortBtnId.classList.add('default-sort');
   sortBtnId.value = 'default';
   searchResult = [];
   let fuse = new Fuse(extandedUserSaved, {
@@ -112,6 +113,7 @@ searchBarClass.addEventListener('input',(e)=>{
 if(sortBtnId){
   sortBtnId.addEventListener('change',()=>{
     let sortby = sortBtnId.value;
+    sortBtnId.classList.remove('default-sort');
     if (sortby === 'price-low-high'){
       for (let i = 0; i < searchResult.length - 1; i++) {
         for (let j = i + 1; j < searchResult.length; j++) {
