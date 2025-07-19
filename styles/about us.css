@@ -991,3 +991,42 @@ next time fixe the height of each section 1 and 2 . and fix the problem of the h
 layout for small phones .
 adjust the font size for phones layout .
 */
+
+@media (max-width:600px) {
+  .nav-bar{
+    display: none;
+  }
+
+  .overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9998;
+  }
+
+  .humburger-btn{
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    right: 20px;
+    top: 10px;
+    z-index: 9999;
+  }
+
+  .nav-overlay{
+    margin-top: 100px;
+    margin-left: 25px;
+  }
+
+  .full-opacity{
+    display: block;
+  }
+}
+
+@media (min-width:600px){
+  .humburger-btn{
+    display: none;
+  }
+}

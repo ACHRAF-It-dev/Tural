@@ -12,26 +12,30 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/tokens.css" />
     <link rel="stylesheet" href="styles/about us.css" />
+    <script defer src="./scripts/about us.js"></script>
     <title>About us</title>
   </head>
   <body>
     <header>
-      <nav>
-        <ul class="nav-bar">
+
+      <button class="humburger-btn">
+        <img class="humburger-icon" src="./assets/svgs/humburger icon.svg" alt="">
+      </button>
+
+      <ul class="nav-bar">
+        <li class="link"><a href="Html index/store.html">Our products</a></li>
+        <li class="link"><a href="Html index/saved items.html">Saved Items</a></li>
+        <li class="link"><a href="">About us</a></li>
+      </ul>
+
+      <div class="overlay">
+        <ul class="nav-overlay">
           <li class="link"><a href="Html index/store.html">Our products</a></li>
           <li class="link"><a href="Html index/saved items.html">Saved Items</a></li>
           <li class="link"><a href="">About us</a></li>
         </ul>
-        
-        <div class="overlay">
-          <img class="close-icon" src="assets/svgs/close icon.svg" alt="">
-          <ul class="nav-overlay">
-            <li class="link"><a href="Html index/store.html">Our products</a></li>
-            <li class="link"><a href="Html index/saved items.html">Saved Items</a></li>
-            <li class="link"><a href="">About us</a></li>
-          </ul>
-        </div>
-      </nav>
+      </div>
+
       <div class="container">
         <div class="hero">
           <picture>
