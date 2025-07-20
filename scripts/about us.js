@@ -11,3 +11,8 @@ humburgerBtn.addEventListener('click',()=>{
     humburgerIcon.src = './assets/svgs/close icon.svg';
   }
 });
+
+let productCategorieCard = document.querySelectorAll('.product-categorie-card');
+productCategorieCard.forEach('mouseenter',()=>{
+  
+}); 
