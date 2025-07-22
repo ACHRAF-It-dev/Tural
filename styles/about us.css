@@ -4,6 +4,14 @@ body{
   background-color: white;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+}
+
 .link,
 header a,
 main span,
