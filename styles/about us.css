@@ -493,6 +493,11 @@ footer .button {
   }
 } 
 
+
+.hide{
+  opacity: 0;
+}
+
 /* #cloud-1{
   transform: scale(2,2);
   animation: cloudMotion 2s ease 1s infinite both alternate;

@@ -26,7 +26,7 @@ Object.entries(product.specs).forEach(([key,val])=>{
 
 Object.entries(product.keyFeatures).forEach(([key,val])=>{
   keyFeaturesHtml += 
-  `<p id="${key}"><span>${key}</span> : ${val}</p>`
+  `<p class="feature-paragraph" id="${key}"><span class="spec-name">${key}</span> : ${val}</p>`
 })
 
 
@@ -131,7 +131,6 @@ if (forwardChangePicture){
     }else{
       i = 0;
     } 
-    console.log(i);
     productImage.src = product.images[i];
   });
 }
@@ -144,7 +143,6 @@ if (backwardChangePicture){
     }else{
       i= product.images.length-1;
     } 
-    console.log(i);
     productImage.src = product.images[i];
   });
   }
@@ -163,7 +161,6 @@ if (backwardChangePicture){
         userSaved.push(productId);
       }
       saveToLocalStorage();
-      console.log(userSaved);
    })
 }
 
