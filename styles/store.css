@@ -426,6 +426,10 @@ header {
   .order-btn{
     display: none;
   }
+
+  .input-wrapper{
+    max-width: 242px;
+  }
 }
 
 @media (min-width: 366px) and (max-width:480px){
