@@ -1,5 +1,9 @@
 /* typographie */
 
+body{
+  background-color: white;
+}
+
 .link,
 header a,
 main span,
