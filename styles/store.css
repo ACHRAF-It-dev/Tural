@@ -427,10 +427,13 @@ header {
     display: none;
   }
 
-
-  .input-wrapper{
+  .search-bar{
     max-width: 200px;
   }
+
+  /* .input-wrapper{
+    max-width: 200px;
+  } */
 }
 
 @media (min-width: 366px) and (max-width:480px){
