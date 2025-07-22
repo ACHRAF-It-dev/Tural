@@ -464,6 +464,76 @@ footer .button {
   margin: 0;
 }
 
+/* #right-hand{
+  fill: #FFA8A7;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: handShaking 2s ease 0s infinite both alternate;
+} */
+
+/* #right-shoulder{
+  fill:#455A64;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: shoulderShaking 2s ease 0s infinite both alternate;
+} */
+
+
+.motion{
+  animation: motion 3s ease-out 0s forwards;
+}
+
+
+@keyframes motion{
+  0%{
+    transform: translateX(0)
+  }
+  100%{
+    transform: translateX(71%);
+  }
+} 
+
+/* #cloud-1{
+  transform: scale(2,2);
+  animation: cloudMotion 2s ease 1s infinite both alternate;
+} */
+
+/* #cloud-2{
+  transform: scale(2,2); 
+  animation: cloudMotion 2s ease 0s infinite both alternate;
+} */
+
+/*
+@keyframes shoulderShaking {
+  0%{
+    transform:translate(0,0) rotate(0deg) ;
+  }
+
+  100%{
+    transform: translate(1px,0px) rotate(-5deg);
+  }
+} */
+
+@keyframes cloudMotion {
+  0% {
+    transform: translate(-150px,-125px) scale(2,2) rotate(30deg);
+  }
+
+  100% {
+    transform: translate(-50px,-100px) scale(2,2) rotate(30deg);
+  }
+}
+
+@keyframes handShaking {
+  0% {
+    transform: rotate(0deg) translateY(.5px);
+  }
+
+  100% {
+    transform: rotate(25deg) translateY(-5px);
+  }
+}
+
 /* making the website responsive ***************************************************************************/
 
 /* for larger screens >= 1440 *****************************/

@@ -12,7 +12,19 @@ humburgerBtn.addEventListener('click',()=>{
   }
 });
 
-let productCategorieCard = document.querySelectorAll('.product-categorie-card');
-productCategorieCard.forEach('mouseenter',()=>{
-  
-}); 
+  const svg = document.querySelector('.animated-svg');
+  const character = document.querySelector('#character');
+  const liftingMachine = document.querySelector('#lifting-machine');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        character.classList.add('motion');
+        liftingMachine.classList.add('motion');
+      }
+    });
+  }, {
+    threshold: 0.7 // Adjust: 0.5 = 50% of SVG must be visible
+  });
+
+  observer.observe(svg);
