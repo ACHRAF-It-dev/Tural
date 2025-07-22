@@ -427,8 +427,9 @@ header {
     display: none;
   }
 
+
   .input-wrapper{
-    max-width: 242px;
+    max-width: 200px;
   }
 }
 
